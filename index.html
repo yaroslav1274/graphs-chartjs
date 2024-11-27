@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab14.1</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Побудова графіків функції (бібліотека Chart.js)</h1>
+    <div class="controls">
+      <div class="box">
+        <label for="functionInput">Введіть функцію:</label>
+        <input type="text" id="functionInput" value="x * Math.sin(x)">
+      </div>
+      
+      <div class="box">
+        <label for="minX">Початок (minX):</label>
+        <input type="number" id="minX" value="0">
+      </div>
+
+      <div class="box">
+        <label for="maxX">Кінець (maxX):</label>
+        <input type="number" id="maxX" value="30">
+      </div>
+
+      <button id="updateGraph">Оновити Графік</button>
+    </div>
+    <canvas id="functionGraph" width="800" height="400"></canvas>
+    <div class="zoom-controls">
+      <button id="zoomIn">Збільшити</button>
+      <button id="zoomOut">Зменшити</button>
+      <button id="resetZoom">Скинути</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
